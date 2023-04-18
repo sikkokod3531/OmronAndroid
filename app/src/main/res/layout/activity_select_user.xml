@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bottom_border">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/start_blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_user_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_toolbar"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/top_bottom_border"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_user_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bottom_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rel_user_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_user1"
+                    style="@style/Color1SwitchStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:textOff=""
+                    android:textOn=""
+                    app:showText="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_user_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_user_1"
+                android:background="@drawable/bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_1" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:textColorHighlight="@color/start_blue"
+                    android:textOff=""
+                    android:textOn=""
+                    app:showText="false" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rel_user_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_user_2"
+                android:background="@drawable/bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_3" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_user3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:textColorHighlight="@color/start_blue"
+                    android:textOff=""
+                    android:textOn=""
+                    app:showText="false" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rel_user_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_user_3"
+                android:background="@drawable/bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_4" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_user4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:textColorHighlight="@color/start_blue"
+                    android:textOff=""
+                    android:textOn=""
+                    app:showText="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bottom_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rel_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_height" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <Spinner
+                        android:id="@+id/sp_height_greater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:entries="@array/height_greater"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="ft" />
+
+                    <Spinner
+                        android:id="@+id/sp_height_lower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:entries="@array/height_lower"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="inch" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_weight" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <Spinner
+                        android:id="@+id/sp_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:minWidth="92dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="lbs" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_stride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bottom_border"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_user_stride"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_stride" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stride_manual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <Spinner
+                            android:id="@+id/sp_stride_greater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:entries="@array/stride_greater"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="ft" />
+
+                        <Spinner
+                            android:id="@+id/sp_stride_lower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:entries="@array/stride_lower"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="inch" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_user_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_start_selector"
+        android:text="@string/btnstart"
+        android:textColor="@color/white" />
+</RelativeLayout>

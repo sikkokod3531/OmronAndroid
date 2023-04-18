@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.omronhealthcare.OmronConnectivitySample.Activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bottom_border">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/device_list"
+            android:textColor="@color/omron_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_saved_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

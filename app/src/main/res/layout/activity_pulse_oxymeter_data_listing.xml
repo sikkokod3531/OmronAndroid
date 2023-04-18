@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.omronhealthcare.OmronConnectivitySample.Activities.OmronConnectedDeviceList">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bottom_border">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Pulse Oxymeter Data"
+            android:textColor="@color/omron_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/oxymeterdata_count"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/top_bar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/oxymeter_data_count"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lv_devicelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/oxymeterdata_count" />
+</RelativeLayout>

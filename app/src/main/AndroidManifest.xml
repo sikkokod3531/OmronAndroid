@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.omronhealthcare.OmronConnectivitySample"
+    android:versionCode="1"
+    android:versionName="5.1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 25mm notification -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.UserPersonalSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.OmronConnectedDeviceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VitalDataListingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.BaseActivity" />
+        <activity
+            android:name=".Activities.SelectUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.WeightScaleMainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.TemperatureRecordingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.PulseOxymeterMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PulseOxymeterDataListingActivity"
+            android:screenOrientation="portrait" />
+        <provider
+            android:name=".Database.OmronDBProvider"
+            android:authorities="com.omronhealthcare.OmronConnectivitySample.Database.OmronDBProvider"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activities.SplashScreen"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.DataListingActivity"
+            android:label="@string/title_activity_data_listing"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ActivityDataActivity"
+            android:label="@string/title_activity_data_listing"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ReminderActivity"
+            android:label="@string/title_activity_reminder"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activities.DataDeviceListingActivity" />
+        <activity
+            android:name=".Activities.ActivityListingActivity"
+            android:label="@string/title_activity_listing"
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name=".utility.NotificationPublisher" android:exported="false"/>
+    </application>
+
+</manifest>
